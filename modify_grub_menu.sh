@@ -29,7 +29,7 @@ mv theme.txt theme.txt.original
 # Re-size the menu options to 90% of the screen width
 # Decrease the size of the fonts slightly (14 > 12)
 # Similar changes to the progress bar
-# See above for instructions to restore the original configureation which has been saved as theme.txt.original
+# See above for instructions to restore the original configuration which has been saved as theme.txt.original
 cat > theme.txt <<EOF
 # openSUSE grub2 theme
 
