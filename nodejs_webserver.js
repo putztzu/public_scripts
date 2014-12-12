@@ -2,7 +2,7 @@
 # This is not required for the project but useful if you opt to use node as your webserver
 # Instructions
 # Install node.js
-# From a command line run "node webserver.js"
+# From a command line run node webserver.js
 
 
 var http = require("http"),
