@@ -1,5 +1,5 @@
 # This script fixes the grub menu when upgrading 13.1 > 13.2
-# Original code created by User tpe
+# Original code created by Petros Tselios, SUSE handle tpe
 
 
 # Backing up original
