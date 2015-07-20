@@ -5,7 +5,7 @@
 # apt-get install git make gcc wget unzip wget zip linux-headers-$(uname -r) build-essential dkms patch perl psmisc &&  \
 # 
 #enable the following line for Fedora, CentOS or RHEL and comment out the zypper and apt-get commands
-# yum gcc glibc-headers kernel-devel kernel-headers make perl git wget && \
+# yum install gcc glibc-headers kernel-devel kernel-headers make perl git wget && \
 #
 git clone https://github.com/rasa/vmware-tools-patches.git && \
 cd vmware-tools-patches && \
