@@ -1,0 +1,10 @@
+1. As root, invoke visudo which opens the sudoers file
+
+2. Append to the end
+
+username <tab> ALL=(ALL:ALL) <tab> ALL
+
+First All     Applies to all hosts
+Second All    run commands as all/any User
+Third All     run commands as all/any Group
+Fourth All    Applies to all commands
