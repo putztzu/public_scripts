@@ -1,14 +1,21 @@
 ## Setup
 
+## Run this script in a root console (su), location not important
+EE Extra Reminder! - Edit the commands below that set your passwords!
+
 ## Description of VM used for testing
+## But this script can be run on bare metal or any other install
 ## BASE
 ## openSUSE 13.2, fully updated
 ## 200GB virtual disk
 ## 4GB RAM for install
 ## Virtualbox 5.0, using KVM interface (and misc other minor configs)
+## If running in a VM, configure nested virtualization (VBox, or KVM)
 ## Windows 10 host
 
 ## Configure machine hostname in YAST > Network Settings > DNS/Hostname tab
+## If you configure Wicked/Static addresses, be sure to configure DNS bound to the proper network interface
+## Highly recommend reboot to lock in changes although may not be necessary
 
 ## Add openSUSE cloud repo. Although Devstack will not install OpenStack from main OpenStack repos, a few packages will still be needed
 zypper ar -f http://download.opensuse.org/repositories/Cloud:/OpenStack:/Master/openSUSE_13.2/ Cloud:OpenStack:Master && zypper --gpg-auto-import-keys ref
