@@ -1,7 +1,7 @@
 ## Setup
 
 ## Run this script in a root console (su), location not important
-EE Extra Reminder! - Edit the commands below that set your passwords!
+## Extra Reminder! - Edit the commands below that set your passwords!
 
 ## Description of VM used for testing
 ## But this script can be run on bare metal or any other install
