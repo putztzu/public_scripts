@@ -18,8 +18,9 @@ zypper -n in git patterns-openSUSE-lamp_server rabbitmq-server bridge-utils ebta
 
 ## Clone latest Devstack to your choice location. If unedited, the location is in your User /home
 su $USER
-cd ~/
-git clone https://github.com/openstack-dev/devstack.git
+git clone https://github.com/openstack-dev/devstack.git ~/devstack
+cd ~/devstack
+
 
 ## Prepare your Devstack Answer file. Replace each "password" with your own passwords
 cat >> localrc << EOF
