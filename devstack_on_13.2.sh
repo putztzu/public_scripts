@@ -23,7 +23,7 @@ zypper ar -f http://download.opensuse.org/repositories/Cloud:/OpenStack:/Master/
 ## Install prerequisites
 zypper -n in git patterns-openSUSE-lamp_server rabbitmq-server bridge-utils ebtables dstat gcc make kernel-devel tree mlocate
 
-## Clone latest Devstack to your choice location. If unedited, the location is in your User /home
+## Clone latest Devstack to your choice location. These are only the install files which you can remove later if you wish. Devstack will actually be installed into /opt.  If unedited, the location is in your User /home
 su $USER
 git clone https://github.com/openstack-dev/devstack.git ~/devstack
 cd ~/devstack
