@@ -1,10 +1,8 @@
 ## Setup
 
 ## Run this script in a root console (su), location not important
-## You will need to run this script twice because today zypper cannot suppress the interactive notification after one of the installed packages. When you run the script again immediately, the package will be seen as already installed bypassing this issue and continue to install devstack automatically.
-
-## When you run the script the second time, you will have to provide your sudo password only once when stack.sh is initiated. After that, go get a cup of coffee and come back approximately a little less than an hour later.
-## Extra Reminder! - Edit the commands below that set your passwords!
+## This script installs prerequisites.
+## When this script completes, change to a normal User (not root) and run the second script.
 
 ## Description of VM used for testing
 ## But this script can be run on bare metal or any other install

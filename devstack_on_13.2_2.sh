@@ -4,6 +4,9 @@
 
 ## Unlike the first script, this script should be run in a normal User(non-root) console
 
+## Within minutes after this script runs, you will have to provide your sudo password only once when stack.sh is initiated. After that, go get a cup of coffee and come back approximately a little less than an hour later.
+## Extra Reminder! - Edit the commands below that set your passwords!
+
 mkdir ~/devstack
 git clone https://github.com/openstack-dev/devstack.git ~/devstack
 cd ~/devstack
