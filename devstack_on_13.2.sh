@@ -20,41 +20,22 @@
 ## If you configure Wicked/Static addresses, be sure to configure DNS bound to the proper network interface
 ## Highly recommend reboot to lock in changes although may not be necessary
 
-## Add openSUSE cloud repo. Although Devstack will not install OpenStack from main OpenStack repos, a few packages will still be needed
+## Add openSUSE cloud repo. Although Devstack will not install OpenStack from main OpenStack repos, a few packages will still be needed. You will find below 13.2, 13.1, TW, LEAP and SLES repositories are provided. If you are not installing 13.2, then comment the following install command and uncomment the appropriate.
+
+# openSUSE 13.2
 zypper ar -f http://download.opensuse.org/repositories/Cloud:/OpenStack:/Master/openSUSE_13.2/ Cloud:OpenStack:Master && zypper --gpg-auto-import-keys ref
+
+# openSUSE 13.1
+# zypper ar -f http://download.opensuse.org/repositories/Cloud:/OpenStack:/Master/openSUSE_13.1/ Cloud:OpenStack:Master && zypper --gpg-auto-import-keys ref
+
+# Tumbleweed
+# zypper ar -f http://download.opensuse.org/repositories/Cloud:/OpenStack:/Master/Tumbleweed/ Cloud:OpenStack:Master && zypper --gpg-auto-import-keys ref
+
+# SLES and LEAP (until LEAP might have its own repo)
+# zypper ar -f http://download.opensuse.org/repositories/Cloud:/OpenStack:/Master/SLE_12/ Cloud:OpenStack:Master && zypper --gpg-auto-import-keys ref
 
 ## Install prerequisites
 zypper -n in git patterns-openSUSE-lamp_server rabbitmq-server bridge-utils ebtables dstat gcc make kernel-devel tree mlocate
 
-## Clone latest Devstack to your choice location. These are only the install files which you can remove later if you wish. Devstack will actually be installed into /opt.  If unedited, the location is in your User /home
-su $USER
-git clone https://github.com/openstack-dev/devstack.git ~/devstack
-cd ~/devstack
-
-
-## Prepare your Devstack Answer file. Replace each "password" with your own passwords
-cat >> localrc << EOF
-ADMIN_PASSWORD=password
-MYSQL_PASSWORD=password
-RABBIT_PASSWORD=password
-SERVICE_PASSWORD=password
-SERVICE_TOKEN=tokentoken
-FLAT_INTERFACE=br100
-LOGFILE=\$DEST/logs/stack.sh.log
-EOF
-
-## Workaround for openSUSE "hostname" bug
-## https://bugzilla.opensuse.org/show_bug.cgi?ie=952517
-sed -i 's/hostname -f/hostname/g' lib/tls
-
-## Install Devstack
-FORCE=yes ./stack.sh
-
-
-
-
-
-
-
-
-
+## After this script has completed, change to a normal User, eg run "su $USER"
+## Then run the second script
