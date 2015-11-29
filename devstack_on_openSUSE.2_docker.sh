@@ -13,12 +13,12 @@ cat >> localrc << EOF
 VIRT_DRIVER=novadocker.virt.docker.DockerDriver
 
 # Introduce glance to docker images
-$GLANCE_API_CONFG
+\$GLANCE_API_CONFG
 [DEFAULT]
 container_formats=ami,ari,aki,bare,ovf,ova,docker
 
 # Configure nova to use the nova-docker driver--Neutron is the default as of kilo
-$NOVA_CONF
+\$NOVA_CONF
 [DEFAULT]
 compute_driver=novadocker.virt.docker.DockerDriver
 
