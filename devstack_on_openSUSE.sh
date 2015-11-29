@@ -35,5 +35,13 @@ zypper ar -f http://download.opensuse.org/repositories/Cloud:/OpenStack:/Master/
 ## Install prerequisites
 zypper -n in git patterns-openSUSE-lamp_server rabbitmq-server bridge-utils ebtables dstat gcc make kernel-devel
 
+## Start and enable services
+systemctl start rabbitmq-server.service
+systemctl enable rabbitmq-server.service
+systemctl start mysql.service
+systemctl enable mysql.service
+systemctl start apache2.service
+systemctl enable apache2.service
+
 ## After this script has completed, change to a normal User, eg run "su $USER"
 ## Then run the second script
