@@ -1,6 +1,8 @@
 
 ## Clone latest Devstack to your choice location. These are only the install files which you can remove later if you wish. Devstack will actually be installed into /opt.  If unedited, the location is in your User /home
-su $USER
+## su $USER
+
+## This script must be run as a non-root, normal User
 mkdir ~/devstack
 git clone https://github.com/openstack-dev/devstack.git ~/devstack
 cd ~/devstack
@@ -20,10 +22,10 @@ $NOVA_CONF
 [DEFAULT]
 compute_driver=novadocker.virt.docker.DockerDriver
 
-ADMIN_PASSWORD=qwerty
-MYSQL_PASSWORD=qwerty
-RABBIT_PASSWORD=qwerty
-SERVICE_PASSWORD=qwerty
+ADMIN_PASSWORD=password
+MYSQL_PASSWORD=password
+RABBIT_PASSWORD=password
+SERVICE_PASSWORD=password
 SERVICE_TOKEN=tokentoken
 FLAT_INTERFACE=br100
 LOGFILE=\$DEST/logs/stack.sh.log
