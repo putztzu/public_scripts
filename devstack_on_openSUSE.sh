@@ -21,7 +21,7 @@
 ## Add openSUSE cloud repo. Although Devstack will not install OpenStack from main OpenStack repos, a few packages will still be needed. You will find below 13.2, 13.1, TW, LEAP and SLES repositories are provided. If you are not installing 13.2, then comment the following install command and uncomment the appropriate.
 
 # openSUSE 13.2
-zypper ar -f http://download.opensuse.org/repositories/Cloud:/OpenStack:/Master/openSUSE_13.2/ Cloud:OpenStack:Master && zypper --gpg-auto-import-keys ref
+# zypper ar -f http://download.opensuse.org/repositories/Cloud:/OpenStack:/Master/openSUSE_13.2/ Cloud:OpenStack:Master && zypper --gpg-auto-import-keys ref
 
 # openSUSE 13.1
 # zypper ar -f http://download.opensuse.org/repositories/Cloud:/OpenStack:/Master/openSUSE_13.1/ Cloud:OpenStack:Master && zypper --gpg-auto-import-keys ref
@@ -30,10 +30,10 @@ zypper ar -f http://download.opensuse.org/repositories/Cloud:/OpenStack:/Master/
 # zypper ar -f http://download.opensuse.org/repositories/Cloud:/OpenStack:/Master/Tumbleweed/ Cloud:OpenStack:Master && zypper --gpg-auto-import-keys ref
 
 # SLES and LEAP (until LEAP might have its own repo)
-# zypper ar -f http://download.opensuse.org/repositories/Cloud:/OpenStack:/Master/SLE_12/ Cloud:OpenStack:Master && zypper --gpg-auto-import-keys ref
+zypper ar -f http://download.opensuse.org/repositories/Cloud:/OpenStack:/Master/SLE_12/ Cloud:OpenStack:Master && zypper --gpg-auto-import-keys ref
 
 ## Install prerequisites
-zypper -n in git patterns-openSUSE-lamp_server rabbitmq-server bridge-utils ebtables dstat gcc make kernel-devel tree mlocate
+zypper -n in git patterns-openSUSE-lamp_server rabbitmq-server bridge-utils ebtables dstat gcc make kernel-devel
 
 ## After this script has completed, change to a normal User, eg run "su $USER"
 ## Then run the second script
