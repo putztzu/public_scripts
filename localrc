@@ -1,0 +1,19 @@
+VIRT_DRIVER=novadocker.virt.docker.DockerDriver
+
+# Introduce glance to docker images
+$GLANCE_API_CONF
+[DEFAULT]
+container_formats=ami,ari,aki,bare,ovf,ova,docker
+
+# Configure nova to use the nova-docker driver--Neutron is the default as of kilo
+$NOVA_CONF
+[DEFAULT]
+compute_driver=novadocker.virt.docker.DockerDriver
+
+ADMIN_PASSWORD=qwerty
+MYSQL_PASSWORD=qwerty
+RABBIT_PASSWORD=qwerty
+SERVICE_PASSWORD=qwerty
+SERVICE_TOKEN=tokentoken
+FLAT_INTERFACE=br100
+LOGFILE=$DEST/logs/stack.sh.log
