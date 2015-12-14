@@ -1,0 +1,28 @@
+Devstack Install Notes
+
+This is your host IP address: 10.88.88.129
+This is your host IPv6 address: ::1
+Horizon is now available at http://10.88.88.129.dashboard
+Keystone is serving at http://10.88.88.129:5000
+The default users are: admin and demo
+The password:qwerty
+
+sudo cp /usr/include/python2.7/Python.h /usr/include/python3.4m
+
+When testing Nova Docker driver
+
+sudo cp /opt/stack/nova-docker/etc/nova/rootwrap.d/docker.filters /etc/nova/rootwrap.d
+
+docker pull cirros
+sudo glance image-create --name cirros --visibility public --container-format docker --disk-format raw
+
+sudo nova boot --image cirros --flavor ml.tiny dl
+sudo nova list
+sudo nova show d1
+
+Current issue.
+Source environment variables is successful (can echo) but not recognized.
+Instead, found that inserting variables in hte nova boot command seems to be taking but is not being accepted
+
+Will need to post to mail list
+
