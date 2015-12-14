@@ -36,8 +36,8 @@ container_formats=ami,ari,aki,bare,ovf,ova,docker
 compute_driver=novadocker.virt.docker.DockerDriver
 
 # Set Project Name
-[DEFAULT]
-\$OS_PROJECT_NAME=default
+# [DEFAULT]
+# \$OS_PROJECT_NAME=default
 EOF
 
 # Configure the Answer file for stack.sh
@@ -48,6 +48,7 @@ MYSQL_PASSWORD=password
 RABBIT_PASSWORD=password
 SERVICE_PASSWORD=password
 SERVICE_TOKEN=tokentoken
+OS_PROJECT_NAME=default
 FLAT_INTERFACE=br100
 LOGFILE=\$DEST/logs/stack.sh.log
 EOF

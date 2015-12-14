@@ -7,7 +7,7 @@ echo "This script starts clean Devstack locations before cleaning generic locati
 cd ~/devstack/
 
 echo "devstack clean"
-clean.sh
+# clean.sh
 
 echo "clean /opt/stack"
 sudo rm -rf /opt/stack*
