@@ -34,6 +34,10 @@ container_formats=ami,ari,aki,bare,ovf,ova,docker
 \$NOVA_CONF
 [DEFAULT]
 compute_driver=novadocker.virt.docker.DockerDriver
+
+# Set Project Name
+[DEFAULT]
+\$OS_PROJECT_NAME=default
 EOF
 
 # Configure the Answer file for stack.sh
@@ -54,4 +58,7 @@ sed -i 's/hostname -f/hostname/g' lib/tls
 
 ## Install Devstack
 FORCE=yes ./stack.sh
+
+## Fix problem - Testing Nova Docker plugin driver later will look in wrong place
+sudo cp /opt/stack/nova-docker/etc/nova/rootwrap.d/docker.filters /etc/nova/rootwrap.dc
 
